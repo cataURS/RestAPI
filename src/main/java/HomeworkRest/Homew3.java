@@ -19,7 +19,7 @@ public class Homew3 extends BaseComponent{
 		
 		File data_file =  new File("file.json");
 		
-		Response respose = doPostRequest("api/v1/Books", data_file, 200);
+		Response respose = doPostRequest2("api/v1/Books", data_file, 200);
 		id = respose.jsonPath().getString("id");
 		//un fel de reverse engineering
 		data_file.toString().contains(id);

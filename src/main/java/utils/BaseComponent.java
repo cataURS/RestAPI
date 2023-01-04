@@ -16,13 +16,31 @@ public class BaseComponent {
 	@BeforeClass
 	public void setup() {
 		
-		//RestAssured.baseURI = "https://keytrcrud.herokuapp.com/";
-		RestAssured.baseURI = "https://fakerestapi.azurewebsites.net/";
+		RestAssured.baseURI = "https://keytrcrud.herokuapp.com/";
+		
+		//Needed for Homework3
+		//RestAssured.baseURI = "https://fakerestapi.azurewebsites.net/";
 
 	}
 	
 	
-	public static Response doPostRequest(String path, File fisier, int statusCode) {
+	public static Response doPostRequest(String path, String body, int statusCode) {
+		
+		Response result = 
+				given().
+					contentType(ContentType.JSON).
+					body(body).
+				when().
+					post(path).
+				then().
+					statusCode(statusCode).
+					extract().response();
+			
+		return result;
+		
+	}
+	
+	public static Response doPostRequest2(String path, File fisier, int statusCode) {
 		
 		Response result = 
 				given().
