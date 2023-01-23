@@ -18,7 +18,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-public class BaseComponent2 {
+public class BaseComponent3{
 	
 	public static RequestSpecification requestSpec;
 	public static ResponseSpecification responseSpec;
@@ -27,24 +27,14 @@ public class BaseComponent2 {
 	@BeforeClass
 	public static void createRequestSpecification() {
 		
-		//use for Homework 6_2
+		//built for Homework 7
 		 requestSpec =  new RequestSpecBuilder()
-				.setBaseUri("https://keytodorestapi.herokuapp.com/")
-				.setBasePath("api")
+				.setBaseUri("https://swapi.dev/")
+				.setBasePath("api/people/1/")
 				.setContentType(ContentType.JSON)
 				.addHeader("accept", "application/json")
 				.build();
 				
-		
-		//Use for Homework 6_1
-		/*
-		requestSpec =  new RequestSpecBuilder()
-				.setBaseUri("https://fakerestapi.azurewebsites.net/")
-				.setBasePath("api/v1/Books")
-				.setContentType(ContentType.JSON)
-				.addHeader("accept", "application/json")
-				.build();
-				*/
 	}
 	
 	@BeforeClass

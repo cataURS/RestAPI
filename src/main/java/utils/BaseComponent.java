@@ -22,7 +22,10 @@ public class BaseComponent {
 		//RestAssured.baseURI = "https://fakerestapi.azurewebsites.net/";
 		
 		//Needed for Homework5
-		RestAssured.baseURI = "https://api.instantwebtools.net/";
+		//RestAssured.baseURI = "https://api.instantwebtools.net/";
+		
+		//needed for Homework6
+		RestAssured.baseURI = "https://fakerestapi.azurewebsites.net/";
 
 	}
 	
