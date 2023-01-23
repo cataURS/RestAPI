@@ -28,9 +28,27 @@ public class BaseComponent3{
 	public static void createRequestSpecification() {
 		
 		//built for Homework 7
-		 requestSpec =  new RequestSpecBuilder()
+		 /* requestSpec =  new RequestSpecBuilder()
 				.setBaseUri("https://swapi.dev/")
 				.setBasePath("api/people/1/")
+				.setContentType(ContentType.JSON)
+				.addHeader("accept", "application/json")
+				.build();
+		*/
+		 
+		//built for Homework 8_1
+		/* requestSpec =  new RequestSpecBuilder()
+				.setBaseUri("https://swapi.dev/")
+				.setBasePath("api/people/4/")
+				.setContentType(ContentType.JSON)
+				.addHeader("accept", "application/json")
+				.build();
+		*/
+		 
+		//built for Homework 8_2
+		 requestSpec =  new RequestSpecBuilder()
+				.setBaseUri("https://swapi.dev/")
+				.setBasePath("api/starship/3/")
 				.setContentType(ContentType.JSON)
 				.addHeader("accept", "application/json")
 				.build();
