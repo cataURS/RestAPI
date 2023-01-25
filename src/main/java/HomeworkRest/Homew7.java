@@ -39,7 +39,7 @@ public class Homew7 extends BaseComponent3{
 		String eye = jsonPath.getString("eye_color");
 		
 		//assertThat((hair,is(equalToIgnoringCase("blond"))), (skin,is(equalTo("fair"))), (eye,is(equalTo("blue"))));
-		//ma dau batut aici, nici pe netnu prea gasesc multe explicatii
+		//ma dau batut aici, nici pe net nu prea gasesc multe explicatii
 		
 		
 		String byear = jsonPath.getString("birth_year");
